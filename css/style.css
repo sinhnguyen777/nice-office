@@ -225,12 +225,79 @@ select.form-select {
     url("../images/banner-section.png") center/cover no-repeat;
   min-height: 300px;
 }
+
 .partner-logo {
-  height: 60px;
+  height: 52px;
   object-fit: contain;
   filter: grayscale(0);
   transition: all 0.3s ease;
 }
-.partner-logo:hover {
-  transform: scale(1.05);
+
+.client-card {
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.client-card img {
+  max-height: 70px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.utility-card {
+  border-radius: 16px;
+  padding: 15px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cfd6e4;
+  transition: transform 0.3s ease;
+}
+
+.utility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.utility-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #20c997;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.utility-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.view-more {
+  text-decoration: none;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
