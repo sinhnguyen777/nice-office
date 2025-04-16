@@ -181,6 +181,15 @@ select.form-select {
 }
 
 /* Office cards */
+.office-for-rent {
+  background-color: #f8fafd;
+}
+
+/* .office-for-rent .row {
+  row-gap: 70px;
+  column-gap: 26px;
+} */
+
 .office-card {
   border: 1px solid var(--border-color);
   overflow: hidden;
