@@ -1,0 +1,236 @@
+.hero-section {
+  background-image: url("../images/banner-nice.png");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 30px;
+  width: 80%;
+  /* max-width: 900px; */
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.btn-primary {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+.navbar {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: #333 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #10b981 !important;
+}
+
+.dropdown-toggle::after {
+  vertical-align: middle;
+}
+
+.btn-register {
+  background-color: #10b981;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+.btn-register:hover {
+  background-color: #059669;
+  color: white;
+}
+
+.search-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.search-btn:hover {
+  background-color: #059669;
+}
+
+select.form-select {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Make images consistent size */
+.card-img-top {
+  height: 160px;
+  object-fit: cover;
+}
+
+/* For rounded corners */
+.rounded-4 {
+  border-radius: 12px !important;
+}
+
+.service-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #4db6ac;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+}
+.service-icon i {
+  color: white;
+  font-size: 32px;
+}
+.service-item {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.service-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.phone-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #4db6ac;
+  color: white;
+  border-radius: 30px;
+  padding: 8px 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.messenger-button {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background-color: #0084ff;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.section-title {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.office-card {
+  border: 1px solid #bdbdbd;
+  overflow: hidden;
+  box-shadow: 1px 1px 4px 0px #00000026;
+  border-radius: 17px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.office-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.office-info {
+  padding: 15px;
+}
+.office-title {
+  color: #107d6e;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.office-address {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.office-detail {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.office-price {
+  color: #107d6e;
+  font-weight: bold;
+  text-align: end;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 74px;
+}
+.section-title {
+  font-weight: bold;
+  margin: 0;
+}
+.view-more {
+  color: #6c757d;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.view-more i {
+  margin-left: 5px;
+}
+
+.quote-banner {
+  background: linear-gradient(rgba(64, 97, 137, 0.85), rgba(64, 97, 137, 0.85)),
+    url("../images/banner-section.png") center/cover no-repeat;
+  min-height: 300px;
+}
+.partner-logo {
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(0);
+  transition: all 0.3s ease;
+}
+.partner-logo:hover {
+  transform: scale(1.05);
+}
