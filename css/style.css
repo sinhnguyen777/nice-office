@@ -1,16 +1,23 @@
 /* Base variables */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap");
+
 :root {
   /* Colors */
   --primary: #10b981;
   --primary-dark: #059669;
   --primary-light: #20c997;
   --secondary: #107d6e;
+
   --text-dark: #333;
   --text-muted: #6c757d;
   --text-light: #666;
+  --text-black: #000;
+
   --border-color: #bdbdbd;
   --border-light: #e0e0e0;
   --border-lighter: #eee;
+
   --bg-light: #f2f2f2;
   --utility-bg: #4db6ac;
   --messenger-bg: #0084ff;
@@ -32,6 +39,18 @@
   --radius-rounded: 50%;
 }
 
+/* Global styles */
+* {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-dark);
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Layout and containers */
 .container {
   max-width: 1132px;
@@ -49,7 +68,6 @@
     padding-right: 0;
   }
 }
-
 /* Header and navigation */
 .navbar {
   background-color: white !important;
@@ -80,6 +98,47 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+
+/* Styling cho Offcanvas Mobile */
+.offcanvas {
+  max-width: 80%;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .offcanvas {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Chỉnh sửa dropdown trên mobile */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    border: none;
+    padding-left: 1rem;
+    background-color: transparent;
+  }
+
+  .dropdown-item {
+    padding: 0.5rem 0;
+  }
+
+  /* Giữ logo không bị vỡ trên mobile */
+  .logo-img {
+    height: 40px;
+    margin-bottom: 0;
+  }
 }
 
 /* Buttons */
@@ -372,6 +431,12 @@ select.form-select {
   font-weight: bold;
   margin: 0;
   margin-bottom: 40px;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: 0.38px;
+  vertical-align: middle;
 }
 
 /* Quote banner */

@@ -1,0 +1,162 @@
+/* Custom styles to complement Bootstrap 5.3 */
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Navigation */
+.navbar .nav-link {
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+.navbar .nav-link.active {
+  color: #00a68c;
+}
+
+.btn-register {
+  background-color: #00a68c;
+  color: white;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.btn-register:hover {
+  background-color: #008e77;
+  color: white;
+}
+
+/* Contact Card */
+.contact-card {
+  background-color: #00a68c;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.contact-info i {
+  font-size: 1.2rem;
+}
+
+.map-container {
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Contact Form */
+.contact-form label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+  border-color: #00a68c;
+  box-shadow: 0 0 0 0.25rem rgba(0, 166, 140, 0.25);
+}
+
+.btn-send {
+  background-color: #00a68c;
+  color: white;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.btn-send:hover {
+  background-color: #008e77;
+  color: white;
+}
+
+/* Footer */
+footer h5 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+footer a {
+  color: #333;
+}
+
+footer a:hover {
+  color: #00a68c;
+}
+
+.social-links .social-link {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links .bi {
+  background-color: #00a68c;
+  transition: all 0.3s ease;
+}
+
+.social-links .bi:hover {
+  background-color: #008e77;
+}
+
+.certification-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Fixed Contact Buttons */
+.fixed-contact-btns {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-phone {
+  display: flex;
+  align-items: center;
+  background-color: #00a68c;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-phone:hover {
+  background-color: #008e77;
+  color: white;
+}
+
+.btn-messenger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0084ff;
+  color: white;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-messenger:hover {
+  background-color: #0070df;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    margin-bottom: 2rem;
+  }
+}

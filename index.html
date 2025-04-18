@@ -13,37 +13,94 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="./images/logo.png" alt="Nice Office Logo" class="logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+      <!-- Button hiển thị offcanvas trên mobile -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Offcanvas cho mobile -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Giới Thiệu</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="rentDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Văn Phòng Cho Thuê
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="rentDropdown">
+                <li><a class="dropdown-item" href="#">Văn phòng hạng A</a></li>
+                <li><a class="dropdown-item" href="#">Văn phòng hạng B</a></li>
+                <li><a class="dropdown-item" href="#">Văn phòng hạng C</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="typeDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Văn Phòng Theo Hạng
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                <li><a class="dropdown-item" href="#">Quận 1</a></li>
+                <li><a class="dropdown-item" href="#">Quận 2</a></li>
+                <li><a class="dropdown-item" href="#">Quận 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trọn Gói</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Thiết Kế Thi Công</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cẩm Nang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Liên Hệ</a>
+            </li>
+          </ul>
+          <div class="d-lg-none mt-3">
+            <a href="#" class="btn btn-register w-100">Ký Gửi BĐS</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu cho desktop -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="#">Giới Thiệu</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="rentDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="rentDropdownDesktop" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Văn Phòng Cho Thuê
             </a>
-            <ul class="dropdown-menu" aria-labelledby="rentDropdown">
+            <ul class="dropdown-menu" aria-labelledby="rentDropdownDesktop">
               <li><a class="dropdown-item" href="#">Văn phòng hạng A</a></li>
               <li><a class="dropdown-item" href="#">Văn phòng hạng B</a></li>
               <li><a class="dropdown-item" href="#">Văn phòng hạng C</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="typeDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="typeDropdownDesktop" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Văn Phòng Theo Hạng
             </a>
-            <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+            <ul class="dropdown-menu" aria-labelledby="typeDropdownDesktop">
               <li><a class="dropdown-item" href="#">Quận 1</a></li>
               <li><a class="dropdown-item" href="#">Quận 2</a></li>
               <li><a class="dropdown-item" href="#">Quận 3</a></li>
@@ -62,7 +119,7 @@
             <a class="nav-link" href="#">Liên Hệ</a>
           </li>
         </ul>
-        <a href="#" class="btn btn-register">Ký Gửi BĐS</a>
+        <a href="#" class="btn btn-register d-none d-lg-block">Ký Gửi BĐS</a>
       </div>
     </div>
   </nav>
@@ -70,69 +127,71 @@
   <!-- Hero Section with Search -->
   <section class="hero-section">
     <div class="hero-overlay">
-      <div class="search-container container">
-        <div class="row mb-4">
-          <div class="col-12">
-            <div class="input-group">
-              <input type="text" class="form-control py-3" placeholder="Nhập tên tòa nhà hoặc tên đường"
-                aria-label="Search">
-              <button class="btn search-btn" type="button">Tìm Kiếm</button>
+      <div class="container">
+        <div class="search-container">
+          <div class="row mb-4">
+            <div class="col-12">
+              <div class="input-group">
+                <input type="text" class="form-control py-3" placeholder="Nhập tên tòa nhà hoặc tên đường"
+                  aria-label="Search">
+                <button class="btn search-btn" type="button">Tìm Kiếm</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md">
-            <select class="form-select mb-3" aria-label="Chọn Quận">
-              <option selected>Chọn Quận</option>
-              <option value="quan1">Quận 1</option>
-              <option value="quan2">Quận 2</option>
-              <option value="quan3">Quận 3</option>
-              <option value="quan4">Quận 4</option>
-              <option value="quan5">Quận 5</option>
-            </select>
-          </div>
-          <div class="col-md">
-            <select class="form-select mb-3" aria-label="Chọn Phường">
-              <option selected>Chọn Phường</option>
-              <option value="phuong1">Phường 1</option>
-              <option value="phuong2">Phường 2</option>
-              <option value="phuong3">Phường 3</option>
-              <option value="phuong4">Phường 4</option>
-              <option value="phuong5">Phường 5</option>
-            </select>
-          </div>
-          <div class="col-md">
-            <select class="form-select mb-3" aria-label="Chọn Đường">
-              <option selected>Chọn Đường</option>
-              <option value="duong1">Đường 1</option>
-              <option value="duong2">Đường 2</option>
-              <option value="duong3">Đường 3</option>
-              <option value="duong4">Đường 4</option>
-              <option value="duong5">Đường 5</option>
-            </select>
-          </div>
-          <div class="col-md">
-            <select class="form-select mb-3" aria-label="Chọn Giá">
-              <option selected>Chọn Giá: 1$ - 100$</option>
-              <option value="gia1">1$ - 20$</option>
-              <option value="gia2">20$ - 40$</option>
-              <option value="gia3">40$ - 60$</option>
-              <option value="gia4">60$ - 80$</option>
-              <option value="gia5">80$ - 100$</option>
-            </select>
-          </div>
-          <div class="col-md">
-            <select class="form-select mb-3" aria-label="Chọn Hướng">
-              <option selected>Chọn Hướng</option>
-              <option value="dong">Đông</option>
-              <option value="tay">Tây</option>
-              <option value="nam">Nam</option>
-              <option value="bac">Bắc</option>
-              <option value="dongnam">Đông Nam</option>
-              <option value="dongbac">Đông Bắc</option>
-              <option value="taynam">Tây Nam</option>
-              <option value="taybac">Tây Bắc</option>
-            </select>
+          <div class="row">
+            <div class="col-md">
+              <select class="form-select mb-3" aria-label="Chọn Quận">
+                <option selected>Chọn Quận</option>
+                <option value="quan1">Quận 1</option>
+                <option value="quan2">Quận 2</option>
+                <option value="quan3">Quận 3</option>
+                <option value="quan4">Quận 4</option>
+                <option value="quan5">Quận 5</option>
+              </select>
+            </div>
+            <div class="col-md">
+              <select class="form-select mb-3" aria-label="Chọn Phường">
+                <option selected>Chọn Phường</option>
+                <option value="phuong1">Phường 1</option>
+                <option value="phuong2">Phường 2</option>
+                <option value="phuong3">Phường 3</option>
+                <option value="phuong4">Phường 4</option>
+                <option value="phuong5">Phường 5</option>
+              </select>
+            </div>
+            <div class="col-md">
+              <select class="form-select mb-3" aria-label="Chọn Đường">
+                <option selected>Chọn Đường</option>
+                <option value="duong1">Đường 1</option>
+                <option value="duong2">Đường 2</option>
+                <option value="duong3">Đường 3</option>
+                <option value="duong4">Đường 4</option>
+                <option value="duong5">Đường 5</option>
+              </select>
+            </div>
+            <div class="col-md">
+              <select class="form-select mb-3" aria-label="Chọn Giá">
+                <option selected>Chọn Giá: 1$ - 100$</option>
+                <option value="gia1">1$ - 20$</option>
+                <option value="gia2">20$ - 40$</option>
+                <option value="gia3">40$ - 60$</option>
+                <option value="gia4">60$ - 80$</option>
+                <option value="gia5">80$ - 100$</option>
+              </select>
+            </div>
+            <div class="col-md">
+              <select class="form-select mb-3" aria-label="Chọn Hướng">
+                <option selected>Chọn Hướng</option>
+                <option value="dong">Đông</option>
+                <option value="tay">Tây</option>
+                <option value="nam">Nam</option>
+                <option value="bac">Bắc</option>
+                <option value="dongnam">Đông Nam</option>
+                <option value="dongbac">Đông Bắc</option>
+                <option value="taynam">Tây Nam</option>
+                <option value="taybac">Tây Bắc</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -730,156 +789,6 @@
     </div>
   </section>
   <!-- Partners Section -->
-  <section class="partners-section py-5">
-    <div class="container">
-
-      <div class="row mb-4">
-        <div class="col-6">
-          <div class="row mb-4">
-            <div class="col-12">
-              <h2 class="fw-bold">Đối Tác Của Chúng Tôi</h2>
-              <p class="text-muted">Nội dung</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="row g-2">
-            <!-- First row of partners -->
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Viettel" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Vincom" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Mapletree" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="LIM" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <!-- Second row of partners -->
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Partner 5" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Partner 6" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Partner 7" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Partner 8" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <!-- Third row of partners -->
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Winhome" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="AN GIA" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Compass Offices" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="CBRE" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <!-- Fourth row of partners -->
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Partner 13" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Partner 14" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Partner 15" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-              <div class="card h-auto border shadow-sm">
-                <div class="card-body d-flex align-items-center justify-content-center p-0">
-                  <img src="./images/logo-partner.png" alt="Partner 16" class="partner-logo img-fluid">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-
 
   <section class="clients-section py-5">
     <div class="container">
