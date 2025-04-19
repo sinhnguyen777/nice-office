@@ -29,7 +29,11 @@
       <!-- Offcanvas cho mobile -->
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <div class="offcanvas-title" id="offcanvasNavbarLabel">
+            <a class="navbar-brand" href="#">
+              <img src="./images/logo.png" alt="Nice Office Logo" class="logo-img">
+            </a>
+          </div>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -349,16 +353,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Fixed Action Buttons -->
-  <!-- <a href="tel:0901007226" class="phone-button">
-    <span>0901 007 226</span>
-    <i class="fas fa-phone"></i>
-  </a>
-
-  <a href="#" class="messenger-button">
-    <i class="fab fa-facebook-messenger fa-lg"></i>
-  </a> -->
 
   <section class="office-for-rent py-5">
     <div class="container">
@@ -1529,6 +1523,38 @@
     </div>
   </footer>
 
+  <!-- Fixed Action Buttons -->
+  <div class="fixed-actions">
+    <!-- Zalo Button -->
+    <div class="action-btn">
+      <div class="action-icon zalo-icon">
+        <i class="bi bi-chat-fill"></i>
+      </div>
+      <div class="action-content zalo-content">
+        Zalo
+      </div>
+    </div>
+
+    <!-- Messenger Button -->
+    <div class="action-btn">
+      <div class="action-icon messenger-icon">
+        <i class="bi bi-messenger"></i>
+      </div>
+      <div class="action-content messenger-content">
+        Messenger
+      </div>
+    </div>
+
+    <!-- Hotline Button -->
+    <div class="action-btn">
+      <div class="action-icon hotline-icon">
+        <i class="bi bi-telephone-fill"></i>
+      </div>
+      <div class="action-content hotline-content">
+        0901 007 226
+      </div>
+    </div>
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
