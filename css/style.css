@@ -452,6 +452,7 @@ select.form-select {
   object-fit: contain;
   filter: grayscale(0);
   transition: all 0.3s ease;
+  border-radius: 8px;
 }
 
 @media (max-width: 576px) {
@@ -560,7 +561,11 @@ select.form-select {
   background: url("../images/banner-section.png") center/cover no-repeat;
   min-height: 490px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .quote-banner::before {
   content: "";
   position: absolute;
@@ -572,6 +577,28 @@ select.form-select {
   opacity: 0.4;
   z-index: 1;
 }
+
+.quote-banner-background {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.quote-banner p {
+  font-size: 34px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 576px) {
+  .quote-banner {
+    min-height: 172px;
+  }
+
+  .quote-banner p {
+    font-size: 14px;
+  }
+}
+
 /* Fixed buttons */
 .phone-button {
   position: fixed;
@@ -697,7 +724,7 @@ select.form-select {
 
 .certification-container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 10px;
 }
 
@@ -708,7 +735,7 @@ select.form-select {
 /* Responsive adjustments */
 @media (max-width: 767px) {
   .footer-top {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 
   .footer-heading {
@@ -755,5 +782,16 @@ select.form-select {
 
   .certification-img {
     height: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-top .row > div:first-child {
+    flex: 0 0 auto;
+    width: 33.333%;
+  }
+  .footer-top .row > div:not(:first-child) {
+    flex: 0 0 auto;
+    width: 22.222%;
   }
 }
