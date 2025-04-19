@@ -5,46 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liên Hệ - Nice Office</title>
-  <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="./css/contact.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <!-- Header/Navigation -->
-  <header class="sticky-top bg-white">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light py-3">
-        <a class="navbar-brand" href="#">
-          <img src="https://via.placeholder.com/150x50" alt="Nice Office Logo" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logo.png" alt="Nice Office Logo" class="logo-img">
+      </a>
+
+      <!-- Button hiển thị offcanvas trên mobile -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Offcanvas cho mobile -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="#">Giới Thiệu</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="rentDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Văn Phòng Cho Thuê
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Option 1</a></li>
-                <li><a class="dropdown-item" href="#">Option 2</a></li>
+              <ul class="dropdown-menu" aria-labelledby="rentDropdown">
+                <li><a class="dropdown-item" href="#">Văn phòng hạng A</a></li>
+                <li><a class="dropdown-item" href="#">Văn phòng hạng B</a></li>
+                <li><a class="dropdown-item" href="#">Văn phòng hạng C</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="typeDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Văn Phòng Theo Hạng
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Option 1</a></li>
-                <li><a class="dropdown-item" href="#">Option 2</a></li>
+              <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                <li><a class="dropdown-item" href="#">Quận 1</a></li>
+                <li><a class="dropdown-item" href="#">Quận 2</a></li>
+                <li><a class="dropdown-item" href="#">Quận 3</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -57,14 +68,60 @@
               <a class="nav-link" href="#">Cẩm Nang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Liên Hệ</a>
+              <a class="nav-link" href="#">Liên Hệ</a>
             </li>
           </ul>
-          <a href="#" class="btn btn-register ms-3">Ký Gửi BĐS</a>
+          <div class="d-lg-none mt-3">
+            <a href="#" class="btn btn-register w-100">Ký Gửi BĐS</a>
+          </div>
         </div>
-      </nav>
+      </div>
+
+      <!-- Menu cho desktop -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Giới Thiệu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="rentDropdownDesktop" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Văn Phòng Cho Thuê
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="rentDropdownDesktop">
+              <li><a class="dropdown-item" href="#">Văn phòng hạng A</a></li>
+              <li><a class="dropdown-item" href="#">Văn phòng hạng B</a></li>
+              <li><a class="dropdown-item" href="#">Văn phòng hạng C</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="typeDropdownDesktop" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Văn Phòng Theo Hạng
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="typeDropdownDesktop">
+              <li><a class="dropdown-item" href="#">Quận 1</a></li>
+              <li><a class="dropdown-item" href="#">Quận 2</a></li>
+              <li><a class="dropdown-item" href="#">Quận 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Trọn Gói</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Thiết Kế Thi Công</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cẩm Nang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Liên Hệ</a>
+          </li>
+        </ul>
+        <a href="#" class="btn btn-register d-none d-lg-block">Ký Gửi BĐS</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Breadcrumb -->
   <div class="container my-3">
@@ -76,7 +133,6 @@
     </nav>
   </div>
 
-  <!-- Contact Section -->
   <section class="contact-section mb-5">
     <div class="container">
       <div class="row">
@@ -90,19 +146,19 @@
               <div class="contact-info text-white">
                 <div class="d-flex mb-3">
                   <i class="bi bi-geo-alt me-3"></i>
-                  <p class="mb-0">137 Lê Quang Định, Phường 14, Bình Thạnh, TP.HCM</p>
+                  <p class="mb-0 text-white">137 Lê Quang Định, Phường 14, Bình Thạnh, TP.HCM</p>
                 </div>
                 <div class="d-flex mb-3">
                   <i class="bi bi-telephone me-3"></i>
-                  <p class="mb-0">0901.007.226</p>
+                  <p class="mb-0 text-white">0901.007.226</p>
                 </div>
                 <div class="d-flex mb-3">
                   <i class="bi bi-envelope me-3"></i>
-                  <p class="mb-0">info@niceoffice.com.vn</p>
+                  <p class="mb-0 text-white">info@niceoffice.com.vn</p>
                 </div>
                 <div class="d-flex mb-3">
                   <i class="bi bi-globe me-3"></i>
-                  <p class="mb-0">niceoffice.com.vn</p>
+                  <p class="mb-0 text-white">niceoffice.com.vn</p>
                 </div>
               </div>
 
@@ -148,90 +204,87 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-5 bg-white">
-    <div class="container">
-      <div class="row">
-        <!-- Company Logo and Info -->
-        <div class="col-lg-3 mb-4">
-          <img src="https://via.placeholder.com/150x50" alt="Nice Office Logo" class="mb-3">
-          <h5 class="mb-3">CÔNG TY TNHH NICE OFFICE</h5>
-          <p class="mb-2"><strong>MST:</strong> 0316465717</p>
-          <p class="mb-2">137 Lê Quang Định, Phường 14, Bình Thạnh, TP.HCM</p>
-          <p class="mb-0">Giờ làm việc: 8:00 - 18:00 Thứ 2 đến Thứ 6/ 8:00 - 12:00 Thứ 7</p>
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img src="./images/logo.png" alt="Nice Office Logo" class="logo-img">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- <img src="./images/logo.png" alt="Nice Office Logo" class="logo-img"> -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h4 class="footer-heading text-uppercase">CÔNG TY TNHH NICE OFFICE</h4>
+            <div class="company-info">MST: 0318485717</div>
+            <div class="company-info">137 Lê Quang Định, Phường 14, Bình Thạnh, TP.HCM</div>
+            <div class="company-info">Giờ làm việc: 8:00 - 18:00 (Thứ 2 đến Thứ 6), 8:00 - 12:00 (Thứ 7)</div>
+          </div>
+
+          <!-- Thông tin liên hệ -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h4 class="footer-heading text-uppercase">THÔNG TIN LIÊN HỆ</h4>
+            <ul class="footer-links">
+              <li><strong>Hotline:</strong> <a href="tel:0901007226">0901.007.226</a></li>
+              <li><strong>Email:</strong> <a href="mailto:info@niceoffice.com.vn">info@niceoffice.com.vn</a></li>
+              <li><strong>Website:</strong> <a href="https://niceoffice.com.vn">niceoffice.com.vn</a></li>
+            </ul>
+          </div>
+
+          <!-- Bài viết mới -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h4 class="footer-heading text-uppercase">BÀI VIẾT MỚI</h4>
+            <ul class="footer-links">
+              <li><a href="#">Giải thích Nice Office</a></li>
+              <li><a href="#">Giải thích Nice Office</a></li>
+              <li><a href="#">Giải thích Nice Office</a></li>
+              <li><a href="#">Chủ thích Nice Office</a></li>
+              <li><a href="#">Giải thích Nice Office</a></li>
+            </ul>
+          </div>
+
+          <!-- Hỗ trợ khách hàng -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h4 class="footer-heading text-uppercase">HỖ TRỢ KHÁCH HÀNG</h4>
+            <ul class="footer-links">
+              <li><a href="#">Giới thiệu Nice Office</a></li>
+              <li><a href="#">Kỹ Đại Văn Phòng Cho Thuê</a></li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Contact Info -->
-        <div class="col-lg-3 mb-4">
-          <h5 class="mb-3">THÔNG TIN LIÊN HỆ</h5>
-          <p class="mb-2"><strong>Hotline:</strong> <a href="tel:0901007226"
-              class="text-danger text-decoration-none">0901.007.226</a></p>
-          <p class="mb-2"><strong>Email:</strong> <a href="mailto:info@niceoffice.com.vn"
-              class="text-primary text-decoration-none">info@niceoffice.com.vn</a></p>
-          <p class="mb-0"><strong>Website:</strong> <a href="https://niceoffice.com.vn"
-              class="text-decoration-none">niceoffice.com.vn</a></p>
-        </div>
-
-        <!-- Latest Posts -->
-        <div class="col-lg-3 mb-4">
-          <h5 class="mb-3">BÀI VIẾT MỚI</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-            <li><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-          </ul>
-        </div>
-
-        <!-- Customer Support -->
-        <div class="col-lg-3 mb-4">
-          <h5 class="mb-3">HỖ TRỢ KHÁCH HÀNG</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none">Ký Gửi Văn Phòng Cho Thuê</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-            <li><a href="#" class="text-decoration-none">Giới thiệu Nice Office</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Certifications and Social Media -->
-      <div class="row mt-3">
-        <div class="col-md-6">
-          <img src="https://via.placeholder.com/150x50" alt="Certification 1" class="me-3 certification-img">
-          <img src="https://via.placeholder.com/150x50" alt="Certification 2" class="certification-img">
-        </div>
-        <div class="col-md-6 text-md-end">
-          <div class="social-links">
-            <a href="#" class="social-link me-2">
-              <i class="bi bi-facebook rounded-circle p-2"></i>
-            </a>
-            <a href="#" class="social-link me-2">
-              <i class="bi bi-linkedin rounded-circle p-2"></i>
-            </a>
-            <a href="#" class="social-link me-2">
-              <i class="bi bi-youtube rounded-circle p-2"></i>
-            </a>
-            <a href="#" class="social-link">
-              <i class="bi bi-twitter rounded-circle p-2"></i>
-            </a>
+        <div class="row">
+          <div class="mt-3 d-flex justify-content-start">
+            <img src="./images/bo-cong-thuong.png" alt="Certification 1" class="certification-img">
+            <img src="./images/DMCA.png" alt="Certification 2" class="certification-img">
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Footer Bottom -->
-      <div class="row mt-4 pt-3 border-top">
-        <div class="col-md-6">
-          <p class="mb-0 text-muted">Chính sách bảo mật</p>
-        </div>
-        <div class="col-md-6 text-md-end">
-          <p class="mb-0 text-muted">Điều khoản sử dụng</p>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 text-md-end footer-right">
+            <a href="#">Chính sách bảo mật</a>
+            <span class="mx-2 text-white">|</span>
+            <a href="#">Điều khoản sử dụng</a>
+          </div>
         </div>
       </div>
     </div>
   </footer>
+
 
   <!-- Fixed Contact Buttons -->
   <div class="fixed-contact-btns">
